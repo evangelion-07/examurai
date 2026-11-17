@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Find and share engineering examination papers by subject, branch, and college.">
+  <title>Examurai — Your next exam starts here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Examurai home"><span class="brand-mark">E</span> examurai<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#papers">Explore papers</a><a href="#how">How it works</a></nav>
+    <div class="header-actions"><button class="text-button" id="signin">Sign in</button><button class="button button-dark" id="uploadTop">Share a paper <span>↗</span></button></div>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> BUILT FOR ENGINEERING STUDENTS</div>
+        <h1>Past papers.<br><span>Future ready.</span></h1>
+        <p class="hero-lede">The question papers you need, shared by students who’ve been there.</p>
+        <form id="searchForm" class="search-box"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Search subjects, papers, colleges..." aria-label="Search question papers"><button type="submit">Find papers <span>→</span></button></form>
+        <div class="hero-meta"><span><b>01</b> Find your subject</span><i></i><span><b>02</b> Choose a paper</span><i></i><span><b>03</b> Get exam ready</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of organized study notes"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="paper paper-back"><div class="paper-lines"></div></div><div class="paper paper-front"><div class="paper-top"><span>EXAMURAI / ARCHIVE</span><span>2025</span></div><div class="paper-title">End-semester<br>examination</div><div class="paper-course">ENGINEERING MATHEMATICS · II</div><div class="paper-rule"></div><div class="paper-lines short"></div><div class="paper-stamp">PAST<br>PAPER</div></div><div class="floating-note note-top">✳ &nbsp; Better prepared</div><div class="floating-note note-bottom"><span class="mini-check">✓</span><span><b>One place.</b><br>Every subject.</span></div><span class="spark spark-one">✳</span><span class="spark spark-two">✳</span></div>
+    </section>
+    <section class="stats" aria-label="Platform overview"><div><strong id="paperCount">—</strong><span>papers to explore</span></div><div><strong id="subjectCount">—</strong><span>subjects covered</span></div><div><strong id="collegeCount">—</strong><span>college collections</span></div><p>Shared by students,<br>for students <span>↗</span></p></section>
+    <section class="browse" id="papers"><div class="section-heading"><div><div class="eyebrow">THE PAPER LIBRARY</div><h2>Find your next <em>study edge.</em></h2></div><a class="view-all" href="#papers">Browse the library <span>→</span></a></div>
+      <div class="filters"><div class="filter-tabs" role="tablist"><button class="filter active" data-filter="all">All papers</button><button class="filter" data-filter="popular">Popular subjects</button><button class="filter" data-filter="recent">Recently added</button></div><label class="select-wrap"><span>Branch</span><select id="branchFilter"><option value="">All branches</option></select></label></div>
+      <div class="paper-grid" id="paperGrid"><div class="empty-state"><span class="loader"></span><p>Finding papers for you...</p></div></div>
+      <p class="library-note" id="libraryNote">Paper listings appear here when the database is connected.</p>
+    </section>
+    <section class="share-banner" id="how"><div class="share-icon">↗</div><div><div class="eyebrow">MAKE THE NEXT EXAM EASIER</div><h2>Got a paper? <em>Pass it on.</em></h2><p>Your upload could be someone else’s breakthrough.</p></div><button class="button button-light" id="uploadCta">Share a paper <span>→</span></button><span class="banner-spark">✳</span></section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark">E</span> examurai<span class="brand-dot">.</span></a><span>Made for the nights before the exam.</span><span>© <span id="year"></span> Examurai</span></footer>
+  <dialog id="uploadDialog"><form id="uploadForm" class="dialog-card"><button type="button" class="dialog-close" aria-label="Close">×</button><div class="eyebrow">GROW THE LIBRARY</div><h2>Share a question paper</h2><p>Sign in first to upload a PDF to the community library.</p><button type="button" class="button button-dark" id="dialogSignin">Sign in to continue →</button></form></dialog>
+  <script src="/scripts/app.js" defer></script>
+</body>
+</html>
